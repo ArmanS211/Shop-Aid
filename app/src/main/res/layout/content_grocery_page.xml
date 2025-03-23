@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+    tools:showIn="@layout/activity_grocery_page">
+
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/response"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="5dp"
+        android:visibility="gone"
+        android:text="ID | Name | Quantity "
+        android:textSize="20dp"/>
+
+
+    <TableLayout
+        android:id="@+id/add_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp">
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="  Enter Grocery ID:" />
+            <EditText
+                android:id="@+id/GroceryID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter Grocery Name:"
+                android:padding="10dip" />
+            <EditText
+                android:id="@+id/GroceryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter Grocery Quantity:"
+                android:padding="10dip" />
+            <EditText
+                android:id="@+id/GroceryQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow>
+
+            <Button
+                android:id="@+id/imgbtn"
+                android:text="Select"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:onClick="IMGCLICK"/>
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/add_button"
+                android:text="Add Grocery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:onClick="setInfo"/>
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="hideAddForm"
+                android:padding="3dip"
+                android:text="Cancel" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/response"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_table"
+        android:text="Message" />
+    <ListView
+        android:id="@+id/prodrec"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentStart="true" />
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prodrec"
+        android:visibility="gone"
+        android:paddingLeft="10dp"
+        android:onClick="GoEdit"
+        android:text="Edit"/>
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prodrec"
+        android:layout_toRightOf="@id/edit"
+        android:visibility="gone"
+        android:onClick="deleteRow"
+        android:text="Delete"/>
+    <ImageView
+        android:id="@+id/testimg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+</RelativeLayout>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <TableLayout
+        android:id="@+id/add_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:paddingTop="40dp"
+        android:paddingLeft="20dp">
+        <TableRow>
+
+            <TextView
+                android:padding="3dip"
+                android:text="  Enter Shopping List ID:" />
+            <EditText
+                android:id="@+id/ShoppingID"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="150dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter Shopping List Name:"
+                android:padding="10dip" />
+            <EditText
+                android:id="@+id/ShoppingName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter Location:"
+                android:padding="10dip" />
+            <EditText
+                android:id="@+id/ShoppingLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Enter Shopping Date:"
+                android:padding="10dip" />
+            <EditText
+                android:id="@+id/ShoppingDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+        <TableRow>
+            <Button
+                android:id="@+id/add_button"
+                android:text="Add Shopping List"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="3dip"
+                android:onClick="AddShoppingList"/>
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="hideAddForm"
+                android:padding="3dip"
+                android:text="Cancel" />
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:text="Choose a Grocery: "
+                android:padding="10dip" />
+        </TableRow>
+    </TableLayout>
+    <TextView
+        android:id="@+id/textheader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ID | NAME | LIST | DATE | Location"
+        android:textSize="20dp"
+        android:layout_marginStart="13dp"
+        android:visibility="gone"
+        android:layout_above="@id/listView"/>
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_below="@id/add_table"
+        android:layout_weight="1"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/listView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="60dp"
+        android:layout_below="@id/add_table"
+        android:visibility="gone" />
+    <Button
+        android:id="@+id/edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listView2"
+        android:visibility="gone"
+        android:paddingLeft="10dp"
+        android:onClick="GoEdit"
+        android:text="Edit"/>
+    <Button
+        android:id="@+id/delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/listView2"
+        android:layout_toRightOf="@id/edit"
+        android:visibility="gone"
+        android:onClick="deleteRow"
+        android:text="Delete"/>
+
+</RelativeLayout>

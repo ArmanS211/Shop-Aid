@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <TableLayout
+        android:id="@+id/edit_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="20dp"
+        android:paddingTop="40dp">
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dip"
+                android:text="Enter Grocery Name:" />
+
+            <EditText
+                android:id="@+id/GroceryName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:padding="10dip"
+                android:text="Enter Grocery Quantity:" />
+
+            <EditText
+                android:id="@+id/GroceryQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minWidth="50dip" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/editG_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="ApplyEdit"
+                android:padding="3dip"
+                android:text="Edit Grocery" />
+
+            <Button
+                android:id="@+id/cancelButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="GetBack"
+                android:padding="3dip"
+                android:text="Back" />
+        </TableRow>
+    </TableLayout>
+    </RelativeLayout>

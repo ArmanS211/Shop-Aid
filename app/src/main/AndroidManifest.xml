@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.shopaid">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ShopAid"
+        tools:targetApi="31">
+        <activity
+            android:name=".EditShoppingPage"
+            android:exported="false"
+            android:label="@string/title_activity_edit_shopping_page"
+            android:theme="@style/Theme.ShopAid.NoActionBar" />
+        <activity
+            android:name=".ShoppingPage"
+            android:exported="false"
+            android:label="@string/title_activity_shopping_page"
+            android:theme="@style/Theme.ShopAid.NoActionBar" />
+        <activity
+            android:name=".EditGroceryPage"
+            android:exported="false"
+            android:label="@string/title_activity_edit_grocery_page"
+            android:theme="@style/Theme.ShopAid.NoActionBar" />
+        <activity
+            android:name=".GroceryPage"
+            android:exported="false"
+            android:label="@string/title_activity_grocery_page"
+            android:theme="@style/Theme.ShopAid.NoActionBar" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.ShopAid.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
